@@ -18,7 +18,6 @@ before_install:
   - docker build --rm --tag coda-drupal:latest ./drupal
   - docker run --mount src=mysql-data,dst=/var/lib/mysql --name drual-mysql -d coda-mysql:latest
   - docker run  --link drual-mysql:mysql --name drupal-app -d drupal coda-drupal:latest
-  - nvm install latest
   
 install:
   - npm install
