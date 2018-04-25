@@ -1,0 +1,22 @@
+{
+  "name": "antipattern",
+  "version": "0.0.1",
+  "description": "test the anipattern",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codaglobal/antipattern.git"
+  },
+  "author": "Coda Global",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codaglobal/antipattern/issues"
+  },
+  "homepage": "https://github.com/codaglobal/antipattern#readme",
+  "dependencies": {
+    "puppeteer": "^1.3.0"
+  }
+}

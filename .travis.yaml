@@ -5,6 +5,11 @@ dist: trusty
 services:
   - docker
 
+language: node_js
+
+node_js:
+  - latest
+
 addons:
   chrome: stable
 
@@ -13,6 +18,7 @@ before_install:
   docker build --rm --tag coda-drupal:latest ./drupal
   docker run --mount src=mysql-data,dst=/var/lib/mysql --label drual-mysql -d coda-mysql:latest
   docker run  --link some-mysql:mysql -d drupal coda-drupal:latest
+  
 
 script:
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  node test
