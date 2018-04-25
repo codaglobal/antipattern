@@ -14,11 +14,12 @@ addons:
   chrome: stable
 
 before_install:
-  docker build --rm --tag coda-mysql:latest ./mysql
-  docker build --rm --tag coda-drupal:latest ./drupal
-  docker run --mount src=mysql-data,dst=/var/lib/mysql --label drual-mysql -d coda-mysql:latest
-  docker run  --link some-mysql:mysql -d drupal coda-drupal:latest
+  - docker build --rm --tag coda-mysql:latest ./mysql
+  - docker build --rm --tag coda-drupal:latest ./drupal
+  - docker run --mount src=mysql-data,dst=/var/lib/mysql --label drual-mysql -d coda-mysql:latest
+  - docker run  --link some-mysql:mysql -d drupal coda-drupal:latest
   
+install:
+  - npm install
 
-script:
-  node test
+script: node test
