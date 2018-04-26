@@ -4,6 +4,8 @@
   "description": "test the anipattern",
   "main": "test.js",
   "scripts": {
+    "start": "node server.js",
+    "install": "node-gyp rebuild",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
